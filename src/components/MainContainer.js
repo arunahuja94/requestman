@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 
+import { requestHandler } from "../services/api";
+import Response from './Response';
 import "../styles/MainWrapper.css";
 
 const MainContainer = () => {
    
 const [apiUrl,setApiUrl] = useState('https://httpbin.org/get');
-const [apiAction,setApiAction] = useState('https://httpbin.org/get');
+const [apiAction,setApiAction] = useState('get');
 const [apiResponse,setApiResponse] = useState('');
- 
+
 
 const handleChange = (event) => {
     const target = event.target;
-    // this.setState({
-    //   [target.name]: target.value
-    // });
+    console.log(target.name,target.value);
+    setApiAction(target.value);
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // const resp = await requestHandler(this.state);
-    //setApiResponse(resp);
+     const resp = await requestHandler({'apiUrl':apiUrl,'apiAction':apiAction});
+    setApiResponse(resp);
  
   };
 
@@ -67,7 +68,7 @@ const handleChange = (event) => {
           </div>
         </div>
         <div className="response">
-          {/* <Response data={ this.state.apiResponse } /> */}
+          <Response data={ apiResponse } />
         </div>
       </div>
     );

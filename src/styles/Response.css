@@ -1,0 +1,10 @@
+.ResponseWrapper{
+  background-color: var(--bg-dark-color);
+  border-radius: 8px;
+}
+  .headers {
+      background-color: var(--bg-dark-color);
+      border-radius: 8px;
+      margin: 5px;
+      padding: 15px;
+  }
