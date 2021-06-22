@@ -1,0 +1,49 @@
+.HomeWrapper
+{
+padding: 1.3rem;
+  width: 93%;
+  margin: 0 auto;
+  padding-bottom: 7rem;
+}
+  @media screen and (max-width: 1093px) {
+    .HomeWrapper
+{
+    width: 95%;
+}
+  }
+  @media screen and (max-width: 1090px) {
+    .HomeWrapper
+    {
+        width: 99%;
+    }
+  }
+  @media screen and (max-width: 870px) {
+    .HomeWrapper
+    {
+        width: 90%;
+    }
+  }
+  @media screen and (max-width: 670px) {
+    .HomeWrapper
+    {
+        width: 99%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .HomeWrapper
+    {
+        width: 90%;
+    }
+  }
+  @media screen and (max-width: 530px) {
+    .HomeWrapper
+    {
+        width: 100%;
+    }
+  }
+
+  .Grid
+  {
+    display: inline-block;
+    width: 100%;
+  }
