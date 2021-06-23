@@ -10,7 +10,7 @@ const Home = () => {
     <div className="HomeWrapper">
       <div className="Grid">
         <MainContainer />
-        <UsageContainer />
+        {/* <UsageContainer /> */}
       </div>
     </div>
   );

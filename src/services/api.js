@@ -11,7 +11,7 @@ export const requestHandler = (requesData) => {
   return axios({
     method: requesData.apiAction,
     url: requesData.apiUrl,
-    // data: ''
+    data: requesData.apiData || ''
   }).then( (response) => {
     return response;
   }).catch( (error) => {

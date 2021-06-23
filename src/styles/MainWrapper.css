@@ -69,11 +69,12 @@
     text-overflow: ellipsis;
     border-color: var(--fg-light-color);
 }
-
+.Rbutton {
+    margin-top: 24px;
+}
 .MainWrapper button {
     align-items: center;
     justify-content: center;
-    margin-top: 24px;
     padding: 6px 16px;
     border-radius: 8px;
     background-color: #473080;
@@ -115,7 +116,38 @@
 .MainWrapper .ace_content{
     background-color: var(--bg-dark-color)
 }
+.form-container {
+    display: flex;
+}
+.form-group{
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
 
+.query_param_inputs
+{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.query_param{
+  display:flex;  
+  flex-direction: column;
+}
+.width-15
+{
+    width:15%;
+}
+.width-40
+{
+    width:40%;
+}
+.Addbutton
+{
+    width: fit-content;
+    margin-left: 10px;
+}
 @media screen and (max-width: 1093px) {
     .MainWrapper{
     width: 60%;
