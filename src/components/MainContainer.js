@@ -63,7 +63,6 @@ const handleChange = (event) => {
       }
      const resp = await requestHandler({'apiUrl':apiUrl,'apiAction':apiAction,'apiData':apiData});
     setApiResponse(resp);
-      console.log("apiData", apiData);
   };
 
     return (
