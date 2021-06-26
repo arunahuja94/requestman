@@ -400,3 +400,33 @@ margin-left: auto;
 .list-view-container {
 margin-top: 20px;
 }
+
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+  overflow: visible;
+}
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ff5722;
+}
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-background-color);
+}
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-track {
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 100px;
+}
