@@ -3,6 +3,8 @@ import React, { useState, Fragment } from "react";
 import { requestHandler } from "../services/api";
 import Response from './Response';
 import "../styles/MainWrapper.css";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const MainContainer = () => {
    
@@ -108,7 +110,15 @@ const handleChange = (event) => {
             </form>
           </div>
         </div>
-        <div className="query_param">
+        <div className="ParamTabs" >
+        <Tabs>
+    <TabList>
+      <Tab>query param</Tab>
+      <Tab>Headers</Tab>
+    </TabList>
+
+    <TabPanel>
+    <div className="query_param">
             <div className="query_param_inputs">
         {inputFields.map((inputField, index) => (
             <Fragment key={`${inputField}~${index}`}>
@@ -156,6 +166,13 @@ const handleChange = (event) => {
                   Add
                 </button>
         </div>
+    </TabPanel>
+    <TabPanel>
+      <h2>Any content 2</h2>
+    </TabPanel>
+  </Tabs>
+        </div>
+        
         <div className="response">
           <Response data={ apiResponse } />
         </div>

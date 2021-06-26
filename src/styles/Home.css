@@ -1,9 +1,9 @@
 .HomeWrapper
 {
-padding: 1.3rem;
-  width: 93%;
-  margin: 0 auto;
-  padding-bottom: 7rem;
+/* padding: 1.3rem; */
+  width: 100%;
+  /* margin: 0 auto;
+  padding-bottom: 7rem; */
 }
   @media screen and (max-width: 1093px) {
     .HomeWrapper
