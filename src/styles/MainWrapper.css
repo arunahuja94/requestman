@@ -3,25 +3,22 @@
 	display: block;
 	justify-content: space-between;
 	align-items: center;
-	width: 64%;
+	width: 100%;
 	z-index: 99;
     padding: 0.7rem 0.7rem;
     float: left;
-    background-color: var(--bg-dark-color);
     border-radius: 8px;
 }
 .MainWrapper ul {
     margin: 4px 0;
     padding: 0;
     list-style-type: none;
+    flex: 1;
+    display: flex;
 }
 
 .MainWrapper ul li {
-    display: inline-flex;
-    flex-flow: column nowrap;
-    flex: 1;
-    justify-content: center;
-    float: left;
+   
 }
 
 .MainWrapper .page-columns {
@@ -51,26 +48,24 @@
     width: calc(100% - 20px);
     color: green;
 }
-
-.MainWrapper .method,.MainWrapper code,.MainWrapper input,.MainWrapper kbd,.MainWrapper pre,.MainWrapper select,.MainWrapper textarea {
-    display: inline-flex;
-    margin: 4px;
-    padding: 8px;
-    border-radius: 8px;
-    background-color: var(--bg-dark-color);
-    color: var(--fg-color);
+.MainWrapper .method
+{
     font-size: 16px;
-    font-family: Roboto Mono,monospace;
     font-weight: 400;
     line-height: 1;
-    user-select: text;
-    width: calc(100% - 8px);
-    resize: vertical;
-    text-overflow: ellipsis;
-    border-color: var(--fg-light-color);
+}
+.MainWrapper code,.MainWrapper input,.MainWrapper kbd,.MainWrapper pre,.MainWrapper select,.MainWrapper textarea {
+    padding: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
 }
 .Rbutton {
-    margin-top: 24px;
+    /* margin-top: 24px; */
 }
 .MainWrapper button {
     align-items: center;
@@ -94,19 +89,20 @@
 }
 
 .MainWrapper .method {
-    width: 15%;
+    flex: 0 0 120px;
 }
 
 .MainWrapper .apiUrl {
-    width: 65%;
+    flex: 1;
+    min-width: 0;
 }
 
 .MainWrapper .send {
-    width: 10%;
+    flex: 0 0 150px;
 }
 
 .MainWrapper .urlInput {
-    width: calc(100% - 20px);
+    border-radius: 0 4px 4px 0;
 }
 
 .MainWrapper .clear {

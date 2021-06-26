@@ -74,7 +74,6 @@ const handleChange = (event) => {
             <form onSubmit={handleSubmit}>
               <ul>
                 <li className="method">
-                  <label> Method </label>
                   <div>
                     <select name="apiAction"
                       value={apiAction} 
@@ -87,7 +86,6 @@ const handleChange = (event) => {
                   </div>
                 </li>
                 <li className="apiUrl method">
-                  <label> API URL</label>
                   <div>
                     <input 
                       type="url"

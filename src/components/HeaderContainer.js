@@ -7,7 +7,7 @@ const HeaderContainer = () => {
     <div className="HeaderContainer">
     <div class="header__section-left">
     <div class="top-navigation">
-    <a target="_self" href="https://github.com/arunahuja94/requestman"><div class="top-navigation-button">Requestman</div></a>
+    <a target="_self" href="https://github.com/arunahuja94/requestman"><div class="top-navigation-text">Requestman</div></a>
     </div></div>
     </div>
   );
