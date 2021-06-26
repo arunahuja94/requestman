@@ -33,10 +33,8 @@
 .MainWrapper .response {
     text-align: left;
     margin: 5px;
-    background-color: var(--bg-dark-color);
-    color: var(--fg-color);
-    font-family: Roboto Mono,monospace;
-    border-radius: 8px;
+    /* background-color: var(--bg-dark-color);
+    color: var(--fg-color); */
 }
 
 .MainWrapper .output {
@@ -83,7 +81,7 @@
 
 .MainWrapper label {
     padding: 4px;
-    color: var(--fg-light-color);
+    color: #ff5724;
 }
 
 .MainWrapper .method {
@@ -108,8 +106,9 @@
 }
 
 .MainWrapper .ace_content{
-    background-color: var(--bg-dark-color)
+    /* background-color: var(--bg-dark-color) */
 }
+
 .form-container {
     display: flex;
 }

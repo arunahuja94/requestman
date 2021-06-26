@@ -6,7 +6,7 @@ import "ace-builds/src-noconflict/theme-solarized_dark";
 import "../styles/ResponseCard.css"
 
 const ResponseCard = (data) => {
-    const width = 650;
+    const width = '100%';
     const height = 380;
 
     return (
@@ -14,7 +14,7 @@ const ResponseCard = (data) => {
             <div className="responseContainer">
                 <AceEditor
                     mode="json"
-                    theme="solarized_dark"
+                    theme="github"
                     name="api-response"
                     fontSize={14}
                     wrapEnabled={true}
