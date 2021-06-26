@@ -4,7 +4,7 @@ import { requestHandler } from "../services/api";
 import Response from './Response';
 import "../styles/MainWrapper.css";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
+// import 'react-tabs/style/react-tabs.css';
 
 const MainContainer = () => {
    
@@ -99,7 +99,6 @@ const handleChange = (event) => {
                   </div>
                 </li>
                 <li className="send method">
-                  <label> </label>
                   <div>
                     <button class="Rbutton"> Send </button>
                   </div>
@@ -121,7 +120,7 @@ const handleChange = (event) => {
         {inputFields.map((inputField, index) => (
             <Fragment key={`${inputField}~${index}`}>
               <div className="form-container">  
-              <div className="form-group width-40">
+              <div className="qp-form-group">
                 <input
                   type="text"
                   className="form-control"
@@ -132,7 +131,7 @@ const handleChange = (event) => {
                   onChange={event => handleInputChange(index, event)}
                 />
               </div>
-              <div className="form-group width-40">
+              <div className="qp-form-group">
                 <input
                   type="text" 
                   className="form-control" 

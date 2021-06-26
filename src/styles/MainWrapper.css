@@ -3,7 +3,7 @@
 	display: block;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
+	width: 98%;
 	z-index: 99;
     padding: 0.7rem 0.7rem;
     float: left;
@@ -54,7 +54,7 @@
     font-weight: 400;
     line-height: 1;
 }
-.MainWrapper code,.MainWrapper input,.MainWrapper kbd,.MainWrapper pre,.MainWrapper select,.MainWrapper textarea {
+.MainWrapper .request code,.MainWrapper input,.MainWrapper .request select {
     padding: 8px;
     font-size: 16px;
     font-weight: 400;
@@ -68,19 +68,17 @@
     /* margin-top: 24px; */
 }
 .MainWrapper button {
+    color: #fff;
     align-items: center;
     justify-content: center;
     padding: 6px 16px;
-    border-radius: 8px;
-    background-color: #473080;
-    color: var(--act-color);
+    border-radius: 4px;
+    background-color: #ff5722;
     font-size: 16px;
-    font-family: Poppins,Roboto,Noto,sans-serif;
     font-weight: 700;
     transition: all .2s ease-in-out;
-    fill: var(--act-color);
     cursor: pointer;
-    border-color: var(--fg-light-color);
+    border: 1px solid #ff5722;
 }
 
 .MainWrapper label {
@@ -115,10 +113,15 @@
 .form-container {
     display: flex;
 }
-.form-group{
+.qp-form-group{
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     align-items: center;
+    flex: 0 0 33%;
+    position: relative;
+    box-sizing: border-box;
+    min-width: 0;
+    border-right: 1px solid #ededed
 }
 
 .query_param_inputs
@@ -145,6 +148,55 @@
     width: fit-content;
     margin-left: 10px;
 }
+
+.react-tabs__tab--selected {
+    color: black;
+    border-bottom: 1px solid #ff5722;
+}
+.react-tabs__tab {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+
+.react-tabs {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  
+  .react-tabs__tab--disabled {
+    color: GrayText;
+    cursor: default;
+  }
+  
+  .react-tabs__tab:focus {
+    box-shadow: 0 0 5px hsl(208, 99%, 50%);
+    border-color: hsl(208, 99%, 50%);
+    outline: none;
+  }
+  
+  .react-tabs__tab:focus:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: -4px;
+    right: -4px;
+    bottom: -5px;
+    background: #fff;
+  }
+  
+  .react-tabs__tab-panel {
+    display: none;
+  }
+  
+  .react-tabs__tab-panel--selected {
+    display: block;
+  }
+  
+
 @media screen and (max-width: 1093px) {
     .MainWrapper{
     width: 60%;
