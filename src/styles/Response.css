@@ -6,6 +6,9 @@
   /* background: #ff5722 !important;
   color: #ffffff !important; */
 }
+.MainWrapper .ace_scrollbar-h {
+  overflow-x: hidden !important;
+}
   .headers {
       /* background-color: var(--bg-dark-color); */
       border-radius: 8px;

@@ -36,3 +36,14 @@
     flex-direction: row;
     align-items: center;
 }
+
+.site-identity
+{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+img.site-logo {
+    width: 35px;
+}

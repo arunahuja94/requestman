@@ -69,8 +69,10 @@ const handleChange = (event) => {
 
     return (
       <div className="MainWrapper">
-        <div className="page-columns">
-          <div className="request">
+          <div className="sidebar"></div>
+          <div className="MainWrapperContent">
+        <div className="request">
+          <div className="request-inner">
             <form onSubmit={handleSubmit}>
               <ul>
                 <li className="method">
@@ -106,7 +108,6 @@ const handleChange = (event) => {
               </ul>
             </form>
           </div>
-        </div>
         <div className="ParamTabs" >
         <Tabs>
     <TabList>
@@ -169,9 +170,11 @@ const handleChange = (event) => {
     </TabPanel>
   </Tabs>
         </div>
-        
+
+        </div>
         <div className="response">
           <Response data={ apiResponse } />
+        </div>
         </div>
       </div>
     );
