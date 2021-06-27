@@ -5,11 +5,12 @@ import ResponseCard from './ResponseCard';
 
 const Response = (res) => {
   const { data, status } = res.data; 
+  console.log(res.data);
   const headers = res.data.headers ? JSON.stringify(res.data.headers, null, 2) : '';
 
   return (
     <div className="ResponseWrapper">
-      <label> Response for API Request </label>
+      
       { status ?
         (
         <div className="output">
@@ -34,7 +35,7 @@ const Response = (res) => {
           <label> JSON Response </label>
           <ResponseCard data={ data } />
         </div>
-        ) : null }
+        ) : <div className="empty-reponse"><img src="https://raw.githubusercontent.com/arunahuja94/requestman/master/postman.png" className="no-response" /></div>}
     </div>
   );
 }

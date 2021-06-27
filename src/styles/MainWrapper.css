@@ -1,252 +1,267 @@
-.MainWrapper
-{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    z-index: 99;
-    margin: auto;
+.MainWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 60px);
+  z-index: 99;
+  margin: auto;
 }
 .MainWrapper ul {
-    margin: 4px 0;
-    padding: 0;
-    list-style-type: none;
-    flex: 1;
-    display: flex;
+  margin: 4px 0;
+  padding: 0;
+  list-style-type: none;
+  flex: 1;
+  display: flex;
 }
 .MainWrapperContent {
-    flex: 1;
+  flex: 1;
 }
 
 .MainWrapper ul li {
-   
 }
 
 .MainWrapper .request {
-    box-shadow: inset 0 -1px 0 #e6e6e6;
-    padding: 20px 25px;
+  box-shadow: inset 0 -1px 0 #e6e6e6;
+  padding: 20px 25px;
+  height: 41%;
 }
-.TabContentLabelContainer
-{
-    width: fit-content;
-    padding: 10px 10px;
-    align-items: center;
-    display: flex;
+.TabContentLabelContainer {
+  width: fit-content;
+  padding: 10px 10px;
+  align-items: center;
+  display: flex;
 }
 .AddIcon {
-    border: 1px solid;
-    border-radius: 50%;
-    padding: 2px 2px;
-    margin: 0 5px;
-    cursor: pointer;
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 2px 2px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.TrashIcon {
+  cursor: pointer;
+}
+.react-tabs__tab-panel {
+  overflow-y: scroll;
+  height: 150px;
 }
 label.TabContentLabel {
-    font-weight: 600;
-    color: #000 !important;
+  font-weight: 600;
+  color: #000 !important;
 }
 .MainWrapper .request-inner {
-    width: 100%;
-    display: inline-block;
+  width: 100%;
+  display: inline-block;
 }
 
 .MainWrapper .response {
-    text-align: left;
-    margin: 5px;
-    /* background-color: var(--bg-dark-color);
+  text-align: left;
+  margin: 5px;
+  height: 50%;
+  /* background-color: var(--bg-dark-color);
     color: var(--fg-color); */
 }
 
 .MainWrapper .output {
-    margin-top: 12px;
+  margin-top: 12px;
 }
 
 .MainWrapper .resStatus {
-    border: none;
-    width: calc(100% - 20px);
-    color: green;
+  border: none;
+  width: calc(100% - 20px);
+  color: green;
 }
-.MainWrapper .method
-{
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
+.MainWrapper .method {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
 }
-.MainWrapper .request code,.MainWrapper input,.MainWrapper .request select {
-    padding: 8px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #e6e6e6;
-    box-sizing: border-box;
+.MainWrapper .request code,
+.MainWrapper input,
+.MainWrapper .request select {
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
 }
 .Rbutton {
-    /* margin-top: 24px; */
+  /* margin-top: 24px; */
 }
 .MainWrapper button {
-    color: #fff;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 16px;
-    border-radius: 4px;
-    background-color: #ff5722;
-    font-size: 16px;
-    font-weight: 700;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    border: 1px solid #ff5722;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background-color: #ff5722;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: 1px solid #ff5722;
 }
 
 .MainWrapper label {
-    padding: 4px;
-    color: #ff5724;
+  padding: 4px;
+  color: #ff5724;
 }
 
 .MainWrapper .method {
-    flex: 0 0 120px;
+  flex: 0 0 120px;
 }
 
 .MainWrapper .apiUrl {
-    flex: 1;
-    min-width: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .MainWrapper .send {
-    flex: 0 0 150px;
+  flex: 0 0 150px;
 }
 
 .MainWrapper .urlInput {
-    border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
 }
 
 .MainWrapper .clear {
-    clear: both;
+  clear: both;
 }
 
-.MainWrapper .ace_content{
-    /* background-color: var(--bg-dark-color) */
+.MainWrapper .ace_content {
+  /* background-color: var(--bg-dark-color) */
 }
 
 .form-container {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
-.qp-form-group{
-    display: flex;
-    /* margin: auto; */
-    align-items: center;
-    flex: 0 0 33%;
-    position: relative;
-    box-sizing: border-box;
-    min-width: 0;
-    border-right: 1px solid #ededed
+.qp-form-group {
+  display: flex;
+  /* margin: auto; */
+  align-items: center;
+  flex: 0 0 45%;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 0;
+  border-right: 1px solid #ededed;
 }
 
-.query_param_inputs
-{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-}
-.query_param{
-  display:flex;  
+.query_param_inputs {
+  display: flex;
   width: 100%;
   flex-direction: column;
 }
-.width-15
-{
-    width:15%;
+.query_param {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 }
-.width-40
-{
-    width:40%;
+.qp-form-group-action {
+  flex: 0 0 5%;
 }
-.Addbutton
-{
-    width: fit-content;
-    margin-left: 10px;
+
+.Addbutton {
+  width: fit-content;
+  margin-left: 10px;
 }
 
 .react-tabs__tab--selected {
-    color: black;
-    border-bottom: 1px solid #ff5722;
+  color: black;
+  border-bottom: 1px solid #ff5722;
 }
 .react-tabs__tab {
-    display: inline-block;
-    position: relative;
-    list-style: none;
-    padding: 6px 12px;
-    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
 }
-
 
 .react-tabs {
-    -webkit-tap-highlight-color: transparent;
-  }
-  
-  
-  .react-tabs__tab--disabled {
-    color: GrayText;
-    cursor: default;
-  }
-  
-  .react-tabs__tab:focus {
-    box-shadow: 0 0 5px hsl(208, 99%, 50%);
-    border-color: hsl(208, 99%, 50%);
-    outline: none;
-  }
-  
-  .react-tabs__tab:focus:after {
-    content: "";
-    position: absolute;
-    height: 5px;
-    left: -4px;
-    right: -4px;
-    bottom: -5px;
-    background: #fff;
-  }
-  
-  .react-tabs__tab-panel {
-    display: none;
-  }
-  
-  .react-tabs__tab-panel--selected {
-    display: block;
-  }
-  
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.react-tabs__tab:focus:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
 
 @media screen and (max-width: 1093px) {
-    .MainWrapper{
+  .MainWrapper {
     width: 60%;
-    }
+  }
 }
 @media screen and (max-width: 1090px) {
-    .MainWrapper{
+  .MainWrapper {
     width: 60%;
-}
+  }
 }
 @media screen and (max-width: 870px) {
-    .MainWrapper{
+  .MainWrapper {
     width: 85%;
-}
+  }
 }
 @media screen and (max-width: 670px) {
-    .MainWrapper{
+  .MainWrapper {
     width: 85%;
-}
+  }
 }
 @media screen and (max-width: 600px) {
-    .MainWrapper{
+  .MainWrapper {
     width: 85%;
-}
+  }
 }
 @media screen and (max-width: 530px) {
-    .MainWrapper{
+  .MainWrapper {
     width: 85%;
-}
+  }
 }
 
 .sidebar {
-    flex: 0 0 46px;
-    height: 100VH;
-    box-shadow: inset -1px 0px 0 #e6e6e6;
+  flex: 0 0 50px;
+  height: 100%;
+  box-shadow: inset -1px 0px 0 #e6e6e6;
+}
+
+.sidebar-label {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-label span {
+  transform: rotate(-180deg);
+  font-weight: 700;
+  color: #7a7e82;
+  font-size: 18px;
+  writing-mode: tb;
 }

@@ -69,7 +69,10 @@ const MainContainer = () => {
 
   return (
     <div className="MainWrapper">
-      <div className="sidebar"></div>
+      <div className="sidebar">
+        <div className="sidebar-label"><span>Request</span></div>
+        <div className="sidebar-label"><span>Response</span></div>
+      </div>
       <div className="MainWrapperContent">
         <div className="request">
           <div className="request-inner">
@@ -160,10 +163,10 @@ const MainContainer = () => {
                               }
                             />
                           </div>
-                          <div className="form-group width-15">
+                          <div className="qp-form-group-action">
                             <span onClick={() => handleRemoveFields(index)}>
                               <FaIcons.FaTrashAlt
-                                size="0.8em"
+                                size="1em"
                                 color="#ff5722"
                                 className="TrashIcon"
                               />
