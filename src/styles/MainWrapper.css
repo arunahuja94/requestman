@@ -41,10 +41,11 @@
 .TrashIcon {
   cursor: pointer;
 }
-.react-tabs__tab-panel {
+.request .react-tabs__tab-panel {
   overflow-y: scroll;
   height: 150px;
 }
+ 
 label.TabContentLabel {
   font-weight: 600;
   color: #000 !important;

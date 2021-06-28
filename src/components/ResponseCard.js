@@ -2,28 +2,26 @@ import React from "react";
 import AceEditor from "react-ace";
 
 import "ace-builds/src-noconflict/mode-json";
-import "ace-builds/src-noconflict/theme-solarized_dark";
+import "ace-builds/src-noconflict/theme-github";
 import "../styles/ResponseCard.css"
 
 const ResponseCard = (data) => {
     const width = '100%';
-    const height = 380;
+    const height = '35vh';
 
     return (
         <div className="ResponseCardWrapper">
             <div className="responseContainer">
                 <AceEditor
                     mode="json"
-                    // theme="github"
+                    theme="github"
                     name="api-response"
                     fontSize={14}
                     wrapEnabled={true}
                     wrap={true}
                     value={ JSON.stringify(data, null, 2) }
-                    // height={`${width}`}
                     height={height}
                     readOnly={true}
-                    // width={`${height}`}
                     width={width}
                     fixedWidthGutter={500}
                     setOptions={{
