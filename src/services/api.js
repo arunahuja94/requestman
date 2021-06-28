@@ -7,6 +7,19 @@ const api = axios.create({
 //   },
 });
 
+axios.interceptors.request.use( x => {
+  // to avoid overwriting if another interceptor
+  // already defined the same object (meta)
+  x.meta = x.meta || {}
+  x.meta.requestStartedAt = new Date().getTime();
+  return x;
+});
+
+axios.interceptors.response.use( x => {
+  x.responseTime = new Date().getTime() - x.config.meta.requestStartedAt;
+  return x;
+});
+
 export const requestHandler = (requesData) => {
   return axios({
     method: requesData.apiAction,

@@ -1,6 +1,7 @@
 .ResponseWrapper{
   /* background-color: var(--bg-dark-color);
   border-radius: 8px; */
+  position: relative;
   height: 100%;
 }
 .MainWrapper .ace_gutter {
@@ -9,6 +10,27 @@
 }
 .MainWrapper .ace_scrollbar-h {
   overflow-x: hidden !important;
+}
+.response-meta-viewer {
+  display: flex;
+  position: absolute;
+  right: 25px;
+  top: 5px;
+  font-size: 11px;
+  color: #6b6b6b;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 0 5px;
+}
+.response-meta-item {
+  margin-right: 12px;
+}
+.response-meta-item-value{
+  padding-left: 4px;
+  color: #007f31;
+  cursor: text;
+  -webkit-user-select: text;
+  user-select: text;
 }
   .headers {
       /* background-color: var(--bg-dark-color); */

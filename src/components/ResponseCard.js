@@ -14,7 +14,7 @@ const ResponseCard = (data) => {
             <div className="responseContainer">
                 <AceEditor
                     mode="json"
-                    theme="github"
+                    // theme="github"
                     name="api-response"
                     fontSize={14}
                     wrapEnabled={true}
