@@ -22,7 +22,8 @@ export const requestHandler = (requesData) => {
     method: requesData.apiAction,
     url: requesData.apiUrl,
     data: requesData.apiData || '',
-    headers: { 'Accept': '*/*', 'Access-Control-Expose-Headers': '*',  'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Authorization': 'Bearer ' + token }
+    headers: { 'Accept': 'application/json,*/*', 'Access-Control-Expose-Headers': '*',  'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Authorization', 'Authorization': 'Bearer ' + token }
+
   }).then( (response) => {
     return response;
   }).catch( (error) => {
