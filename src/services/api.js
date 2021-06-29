@@ -1,10 +1,7 @@
 import axios from "axios";
-
+const token = 'asasasas121212';
 const api = axios.create({
-  baseURL: 'https://httpbin.org',
-//   headers: {
-//     Authorization: `Bearer ${token}`,
-//   },
+  //baseURL: 'https://httpbin.org',
 });
 
 axios.interceptors.request.use( x => {
@@ -24,7 +21,8 @@ export const requestHandler = (requesData) => {
   return axios({
     method: requesData.apiAction,
     url: requesData.apiUrl,
-    data: requesData.apiData || ''
+    data: requesData.apiData || '',
+    headers: { 'Accept': '*/*', 'Access-Control-Expose-Headers': '*',  'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Authorization': 'Bearer ' + token }
   }).then( (response) => {
     return response;
   }).catch( (error) => {
