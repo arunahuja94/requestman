@@ -17,9 +17,6 @@
   flex: 1;
 }
 
-.MainWrapper ul li {
-}
-
 .MainWrapper .request {
   box-shadow: inset 0 -1px 0 #e6e6e6;
   padding: 7px 10px;

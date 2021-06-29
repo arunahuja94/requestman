@@ -53,17 +53,63 @@ const MainContainer = () => {
     }
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    let apiData = {};
+/* 
+Code refactor for createPayload -- Pending
+*/
+  
+  const createPayload = (type) => {
+    var apiData ;
+  if(type == 'POST')
+  {
+    apiData = {};
     for (const { qp_key: qp_key, qp_value: qp_value } of inputFields) {
+      if(qp_key != '')
+      {
       apiData[qp_key] = qp_value;
+      }
     }
-    const resp = await requestHandler({
-      apiUrl: apiUrl,
-      apiAction: apiAction,
-      apiData: apiData,
-    });
+  }
+
+  if(type == 'GET')
+  {
+    apiData = '';
+    for (const { qp_key: qp_key, qp_value: qp_value } of inputFields) {
+      if(qp_key != '')
+      {
+      apiData += apiData.length > 0 ? `&${qp_key}=${qp_value}` : `?${qp_key}=${qp_value}`;
+      }
+    }
+  }
+  return apiData;
+  }
+   
+  const createRequestObject = () => {
+    let apiObject = {};
+    switch (apiAction.toUpperCase()) {
+      case 'POST':
+      case 'PUT':
+      case 'PATCH':
+        apiObject = {
+          apiUrl: apiUrl,
+          apiAction: apiAction,
+          apiData: createPayload('POST'),
+        }
+        break;
+      case 'GET':
+      case 'DELETE':
+        apiObject = {
+          apiUrl: apiUrl+''+createPayload('GET'),
+          apiAction: apiAction,
+        }
+        break;
+      default:    
+    }
+    return apiObject;
+  }
+   
+  const handleSubmit = async (event) => {     
+    event.preventDefault();
+    const resp = await requestHandler(createRequestObject());
     setApiResponse(resp);
   };
 

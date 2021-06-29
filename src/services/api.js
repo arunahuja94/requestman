@@ -32,20 +32,17 @@ export const requestHandler = (requesData) => {
     if (error.response) {
       console.log(error.response.data);
       console.log(error.response.status);
-      const resError = { 
+      return { 
         'data' : error.response.data ? error.response.data : errorMsg,
         'status' : error.response.status ? error.response.status : '400'
       };
 
-      return resError;
     } else if (error.request) {
       console.log(error.request);
-      const reqError ={
+      return {
         'data' : errorMsg,
         'status' : '400'
       };
-
-      return reqError;
     } else {
       console.log('Error', error.message);
       const reqError = {

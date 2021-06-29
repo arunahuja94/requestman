@@ -1,16 +1,7 @@
-
-.ResponseCardWrapper{
-/* background-color: var(--bg-dark-color);
-border-radius: 8px; */
-}
 .responseContainer {
     padding-left: 5px;
     width: 98%;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-
-#api-response {
-    /* border-radius: 10px; */
-    /* background-color: #fff */
-}
+ 
