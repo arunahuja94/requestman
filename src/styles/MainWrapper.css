@@ -86,9 +86,7 @@ label.TabContentLabel {
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
 }
-.Rbutton {
-  /* margin-top: 24px; */
-}
+ 
 .MainWrapper button {
   color: #fff;
   align-items: center;
@@ -128,10 +126,7 @@ label.TabContentLabel {
 .MainWrapper .clear {
   clear: both;
 }
-
-.MainWrapper .ace_content {
-  /* background-color: var(--bg-dark-color) */
-}
+ 
 
 .form-container {
   display: flex;
