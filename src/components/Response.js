@@ -11,7 +11,7 @@ const Response = (res) => {
   const responseSize = res.data.headers ? prettyBytes(JSON.stringify(res.data).length + JSON.stringify(res.data.headers).length) : '';
   if(!status)
   {
-return (<div className="empty-reponse"><img src="https://raw.githubusercontent.com/arunahuja94/requestman/master/postman.png" className="no-response" /></div>);
+return (<div className="empty-reponse"><img src="https://raw.githubusercontent.com/arunahuja94/requestman/master/requestman_logo.png" className="no-response" /></div>);
   }
 
   return (
