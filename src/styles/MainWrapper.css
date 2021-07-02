@@ -42,7 +42,7 @@
   overflow-y: scroll;
   height: 150px;
 }
- 
+
 label.TabContentLabel {
   font-weight: 600;
   color: #000 !important;
@@ -86,7 +86,7 @@ label.TabContentLabel {
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
 }
- 
+
 .MainWrapper button {
   color: #fff;
   align-items: center;
@@ -126,7 +126,6 @@ label.TabContentLabel {
 .MainWrapper .clear {
   clear: both;
 }
- 
 
 .form-container {
   display: flex;
