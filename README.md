@@ -1,7 +1,7 @@
 <!-- Title -->
 
 <p align="center">
-  <a href="https://github.com/arunahuja94/requestman">
+  <a href="https://arunahuja94.github.io/requestman/">
     <img src="./.github-assets/requestman_logo.png" height="128">
     <h1 align="center">REQUESTMAN</h1>
   </a>
@@ -33,16 +33,25 @@ Once you're up and running with Requestman
   <img align="center" alt="Product: demo" src="./.github-assets/requestman_view.png" />
 </p>
 
-# Requestman (https://arunahuja94.github.io/requestman/)
+## SETUP & USAGE
 
-A postman clone in react ( in progress... )
+- To start, Download or clone the repository by using `git clone https://github.com/arunahuja94/requestman.git`
+- npm install
+- npm start
 
-# Post Req test 
 
-URL - https://reqres.in/api/login
+## API EXAMPLES TO TEST
 
-body -> email : eve.holt@reqres.in ; password : cityslicka
+### POST
 
-# get req test
+Request URL - [https://reqres.in/api/login](https://reqres.in/api/login) and the Query Params:
 
-URL - https://reqres.in/api/users
+| Key             | Value                 |
+| --------------- | --------------------- |
+| **`email`**     | `eve.holt@reqres.in`  |
+| **`password`**  | `cityslicka`          |
+
+
+### GET
+
+Request URL - [https://reqres.in/api/users](https://reqres.in/api/users)
