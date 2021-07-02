@@ -1,10 +1,8 @@
 <!-- Title -->
 
 <p align="center">
-  <a href="https://arunahuja94.github.io/requestman/">
     <img src="./.github-assets/requestman_logo.png" height="128">
     <h1 align="center">REQUESTMAN</h1>
-  </a>
 </p>
 
 <!-- Header -->
@@ -15,7 +13,7 @@
 
   <p align="center">
     <!-- Web -->
-    <img alt="Supports Expo Web" longdesc="Supports Expo Web" src="https://img.shields.io/badge/web-000.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" />
+    <a href="https://arunahuja94.github.io/requestman/"> <img alt="Web Application" longdesc="Requestman - Web Application" src="https://img.shields.io/badge/web-000.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" /></a>
   </p>
   
 </p>
