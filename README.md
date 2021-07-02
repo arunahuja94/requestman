@@ -14,6 +14,7 @@
   <p align="center">
     <!-- Web -->
     <a href="https://arunahuja94.github.io/requestman/"> <img alt="Web Application" longdesc="Requestman - Web Application" src="https://img.shields.io/badge/web-000.svg?style=flat-square&logo=GOOGLE-CHROME&labelColor=4285F4&logoColor=fff" /></a>
+     <img alt="Web Application" src="https://img.shields.io/badge/Status-In%20Progress...-green" />
   </p>
   
 </p>
