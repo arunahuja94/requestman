@@ -26,6 +26,7 @@
 ```sh
 git clone https://github.com/arunahuja94/requestman.git
 ```
+## Look and feel
 
 Once you're up and running with Requestman
 
@@ -55,3 +56,13 @@ Request URL - [https://reqres.in/api/login](https://reqres.in/api/login) and the
 ### GET
 
 Request URL - [https://reqres.in/api/users](https://reqres.in/api/users)
+
+## Contributing
+
+If you'd love to contribute to this project, fork, make your edits and send in a pull request.
+
+## Support Us
+
+If you like this project please give a star
+
+
