@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/arunahuja94/requestman">
-    <img src="https://raw.githubusercontent.com/arunahuja94/requestman/master/postman.png" height="128">
+    <img src="./.github-assets/requestman_logo.png" height="128">
     <h1 align="center">REQUESTMAN</h1>
   </a>
 </p>
@@ -30,7 +30,7 @@ git clone https://github.com/arunahuja94/requestman.git
 Once you're up and running with Requestman
 
 <p align="center">
-  <img align="center" alt="Product: demo" src="https://raw.githubusercontent.com/arunahuja94/requestman/master/postman.png" />
+  <img align="center" alt="Product: demo" src="./.github-assets/requestman_view.png" />
 </p>
 
 # Requestman (https://arunahuja94.github.io/requestman/)
