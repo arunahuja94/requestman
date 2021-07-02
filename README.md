@@ -52,14 +52,19 @@ Request URL - [https://reqres.in/api/login](https://reqres.in/api/login) and the
 | **`email`**     | `eve.holt@reqres.in`  |
 | **`password`**  | `cityslicka`          |
 
-
 ### GET
 
 Request URL - [https://reqres.in/api/users](https://reqres.in/api/users)
 
+
 ## Contributing
 
-If you'd love to contribute to this project, fork, make your edits and send in a pull request.
+1. Fork it
+2. Create your feature branch (`git checkout -b feature/fooBar`)
+3. Commit your changes (`git commit -m 'Add some fooBar'`)
+4. Push to the branch (`git push origin feature/fooBar`)
+5. Create a new Pull Request
+
 
 ## Support Us
 
