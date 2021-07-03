@@ -56,6 +56,17 @@ Request URL - [https://reqres.in/api/login](https://reqres.in/api/login) and the
 Request URL - [https://reqres.in/api/users](https://reqres.in/api/users)
 
 
+## TO-Do List
+
+- Improve styling architecture
+- Improve Code quality
+- Store last API (History) Calls in cookies/localstorage
+- Create a View to show History
+- Add Request Headers
+- Add Request Body (with Custm JSON)
+- More to be added Soon .... 
+
+
 ## Contributing
 
 1. Fork it
