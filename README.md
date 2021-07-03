@@ -64,6 +64,7 @@ Request URL - [https://reqres.in/api/users](https://reqres.in/api/users)
 - Create a View to show History
 - Add Request Headers
 - Add Request Body (with Custom JSON)
+- Resizable response section
 - More to be added Soon .... 
 
 
