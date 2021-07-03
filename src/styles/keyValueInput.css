@@ -1,0 +1,19 @@
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
+.qp-form-group {
+  display: flex;
+  /* margin: auto; */
+  align-items: center;
+  flex: 0 0 45%;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 0;
+  border-right: 1px solid #ededed;
+}
+
+.qp-form-group-action {
+  flex: 0 0 5%;
+}

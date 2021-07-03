@@ -4,10 +4,7 @@
   position: relative;
   height: 100%;
 }
-.MainWrapper .ace_gutter {
-  /* background: #ff5722 !important;
-  color: #ffffff !important; */
-}
+ 
 .MainWrapper .ace_scrollbar-h {
   overflow-x: hidden !important;
 }

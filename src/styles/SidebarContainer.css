@@ -1,0 +1,20 @@
+.sidebar {
+  flex: 0 0 50px;
+  height: 100%;
+  box-shadow: inset -1px 0px 0 #e6e6e6;
+}
+
+.sidebar-label {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-label span {
+  transform: rotate(-180deg);
+  font-weight: 700;
+  color: #7a7e82;
+  font-size: 18px;
+  writing-mode: tb;
+}

@@ -1,14 +1,18 @@
-import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
 
 import { requestHandler } from "../services/api";
 import Response from "./Response";
 import "../styles/MainWrapper.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import * as FaIcons from "react-icons/fa";
+import KeyvalueInput from "../utils/keyValueInput";
+import createRequestObject from "../utils/RequestPayload";
+import Sidebar from "./SidebarContainer";
+import RequestmanConstant from "../constant/RequestmanConstant";
 
 const MainContainer = () => {
   const [apiUrl, setApiUrl] = useState("");
-  const [apiAction, setApiAction] = useState("get");
+  const [apiAction, setApiAction] = useState(RequestmanConstant.API_METHOD.GET);
   const [apiResponse, setApiResponse] = useState("");
   const [inputFields, setInputFields] = useState([
     { qp_key: "", qp_value: "" },
@@ -53,72 +57,21 @@ const MainContainer = () => {
     }
   };
 
-/* 
-Code refactor for createPayload -- Pending
-*/
-  
-  const createPayload = (type) => {
-    var apiData ;
-  if(type == 'POST')
-  {
-    apiData = {};
-    for (const { qp_key: qp_key, qp_value: qp_value } of inputFields) {
-      if(qp_key != '')
-      {
-      apiData[qp_key] = qp_value;
-      }
-    }
-  }
-
-  if(type == 'GET')
-  {
-    apiData = '';
-    for (const { qp_key: qp_key, qp_value: qp_value } of inputFields) {
-      if(qp_key != '')
-      {
-      apiData += apiData.length > 0 ? `&${qp_key}=${qp_value}` : `?${qp_key}=${qp_value}`;
-      }
-    }
-  }
-  return apiData;
-  }
-   
-  const createRequestObject = () => {
-    let apiObject = {};
-    switch (apiAction.toUpperCase()) {
-      case 'POST':
-      case 'PUT':
-      case 'PATCH':
-        apiObject = {
-          apiUrl: apiUrl,
-          apiAction: apiAction,
-          apiData: createPayload('POST'),
-        }
-        break;
-      case 'GET':
-      case 'DELETE':
-        apiObject = {
-          apiUrl: apiUrl+''+createPayload('GET'),
-          apiAction: apiAction,
-        }
-        break;
-      default:    
-    }
-    return apiObject;
-  }
-   
-  const handleSubmit = async (event) => {     
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    const resp = await requestHandler(createRequestObject());
+    const resp = await requestHandler(
+      createRequestObject({
+        apiUrl: apiUrl,
+        apiAction: apiAction,
+        inputFields: inputFields,
+      })
+    );
     setApiResponse(resp);
   };
 
   return (
     <div className="MainWrapper">
-      <div className="sidebar">
-        <div className="sidebar-label"><span>Request</span></div>
-        <div className="sidebar-label"><span>Response</span></div>
-      </div>
+      <Sidebar />
       <div className="MainWrapperContent">
         <div className="request">
           <div className="request-inner">
@@ -181,45 +134,12 @@ Code refactor for createPayload -- Pending
                     </div>
 
                     {inputFields.map((inputField, index) => (
-                      <Fragment key={`${inputField}~${index}`}>
-                        <div className="form-container">
-                          <div className="qp-form-group">
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="qp_key"
-                              name="qp_key"
-                              value={inputField.qp_key}
-                              placeholder="key"
-                              onChange={(event) =>
-                                handleInputChange(index, event)
-                              }
-                            />
-                          </div>
-                          <div className="qp-form-group">
-                            <input
-                              type="text"
-                              className="form-control"
-                              id="qp_value"
-                              name="qp_value"
-                              value={inputField.qp_value}
-                              placeholder="Value"
-                              onChange={(event) =>
-                                handleInputChange(index, event)
-                              }
-                            />
-                          </div>
-                          <div className="qp-form-group-action">
-                            <span onClick={() => handleRemoveFields(index)}>
-                              <FaIcons.FaTrashAlt
-                                size="1em"
-                                color="#ff5722"
-                                className="TrashIcon"
-                              />
-                            </span>
-                          </div>
-                        </div>
-                      </Fragment>
+                      <KeyvalueInput
+                        inputField={inputField}
+                        index={index}
+                        handleInputChange={handleInputChange}
+                        handleRemoveFields={handleRemoveFields}
+                      />
                     ))}
                   </div>
                 </div>

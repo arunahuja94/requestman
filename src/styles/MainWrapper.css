@@ -127,21 +127,6 @@ label.TabContentLabel {
   clear: both;
 }
 
-.form-container {
-  display: flex;
-  align-items: center;
-}
-.qp-form-group {
-  display: flex;
-  /* margin: auto; */
-  align-items: center;
-  flex: 0 0 45%;
-  position: relative;
-  box-sizing: border-box;
-  min-width: 0;
-  border-right: 1px solid #ededed;
-}
-
 .query_param_inputs {
   display: flex;
   width: 100%;
@@ -151,9 +136,6 @@ label.TabContentLabel {
   display: flex;
   width: 100%;
   flex-direction: column;
-}
-.qp-form-group-action {
-  flex: 0 0 5%;
 }
 
 .Addbutton {
@@ -235,25 +217,4 @@ label.TabContentLabel {
   .MainWrapper {
     width: 85%;
   }
-}
-
-.sidebar {
-  flex: 0 0 50px;
-  height: 100%;
-  box-shadow: inset -1px 0px 0 #e6e6e6;
-}
-
-.sidebar-label {
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.sidebar-label span {
-  transform: rotate(-180deg);
-  font-weight: 700;
-  color: #7a7e82;
-  font-size: 18px;
-  writing-mode: tb;
 }
