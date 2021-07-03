@@ -63,7 +63,7 @@ Request URL - [https://reqres.in/api/users](https://reqres.in/api/users)
 - Store last API (History) Calls in cookies/localstorage
 - Create a View to show History
 - Add Request Headers
-- Add Request Body (with Custm JSON)
+- Add Request Body (with Custom JSON)
 - More to be added Soon .... 
 
 
