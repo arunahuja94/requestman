@@ -1,7 +1,12 @@
 import React, { Fragment } from "react";
 import "../styles/keyValueInput.css";
 import * as FaIcons from "react-icons/fa";
-const KeyvalueInput = ({inputField,index,handleInputChange,handleRemoveFields}) => {
+const KeyvalueInput = ({
+  inputField,
+  index,
+  handleInputChange,
+  handleRemoveFields,
+}) => {
   return (
     <Fragment key={`${inputField}~${index}`}>
       <div className="form-container">

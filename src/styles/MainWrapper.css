@@ -22,19 +22,7 @@
   padding: 7px 10px;
   height: 45%;
 }
-.TabContentLabelContainer {
-  width: fit-content;
-  padding: 10px 10px;
-  align-items: center;
-  display: flex;
-}
-.AddIcon {
-  border: 1px solid;
-  border-radius: 50%;
-  padding: 2px 2px;
-  margin: 0 5px;
-  cursor: pointer;
-}
+
 .TrashIcon {
   cursor: pointer;
 }
@@ -43,10 +31,6 @@
   height: 150px;
 }
 
-label.TabContentLabel {
-  font-weight: 600;
-  color: #000 !important;
-}
 .MainWrapper .request-inner {
   width: 100%;
   display: inline-block;
@@ -125,17 +109,6 @@ label.TabContentLabel {
 
 .MainWrapper .clear {
   clear: both;
-}
-
-.query_param_inputs {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-}
-.query_param {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
 }
 
 .Addbutton {

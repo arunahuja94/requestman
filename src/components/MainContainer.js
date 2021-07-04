@@ -4,19 +4,18 @@ import { requestHandler } from "../services/api";
 import Response from "./Response";
 import "../styles/MainWrapper.css";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import * as FaIcons from "react-icons/fa";
-import KeyvalueInput from "../utils/keyValueInput";
 import createRequestObject from "../utils/RequestPayload";
 import Sidebar from "./SidebarContainer";
 import RequestmanConstant from "../constant/RequestmanConstant";
+import QueryParam from "../utils/QueryParam";
 
 const MainContainer = () => {
   const [apiUrl, setApiUrl] = useState("");
   const [apiAction, setApiAction] = useState(RequestmanConstant.API_METHOD.GET);
   const [apiResponse, setApiResponse] = useState("");
-  const [inputFields, setInputFields] = useState([
-    { qp_key: "", qp_value: "" },
-  ]);
+  const [inputFields, setInputFields] = useState(
+    RequestmanConstant.KEY_VALUE_INPUT
+  );
 
   const handleAddFields = () => {
     const values = [...inputFields];
@@ -45,11 +44,11 @@ const MainContainer = () => {
     const target = event.target;
     console.log(target.name, target.value);
     switch (target.name) {
-      case "apiUrl":
+      case RequestmanConstant.REQUEST_FORM_API_URL:
         setApiUrl(target.value);
         break;
 
-      case "apiAction":
+      case RequestmanConstant.REQUEST_FORM_API_ACTION:
         setApiAction(target.value);
         break;
 
@@ -80,14 +79,22 @@ const MainContainer = () => {
                 <li className="method">
                   <div>
                     <select
-                      name="apiAction"
+                      name={RequestmanConstant.REQUEST_FORM_API_ACTION}
                       value={apiAction}
                       onChange={handleChange}
                     >
-                      <option value="get">GET</option>
-                      <option value="post">POST</option>
-                      <option value="put">PUT</option>
-                      <option value="delete">DELETE</option>
+                      <option value={RequestmanConstant.API_METHOD.GET}>
+                        {RequestmanConstant.API_METHOD.GET}
+                      </option>
+                      <option value={RequestmanConstant.API_METHOD.POST}>
+                        {RequestmanConstant.API_METHOD.POST}
+                      </option>
+                      <option value={RequestmanConstant.API_METHOD.PUT}>
+                        {RequestmanConstant.API_METHOD.PUT}
+                      </option>
+                      <option value={RequestmanConstant.API_METHOD.DELETE}>
+                        {RequestmanConstant.API_METHOD.DELETE}
+                      </option>
                     </select>
                   </div>
                 </li>
@@ -95,7 +102,7 @@ const MainContainer = () => {
                   <div>
                     <input
                       type="url"
-                      name="apiUrl"
+                      name={RequestmanConstant.REQUEST_FORM_API_URL}
                       value={apiUrl}
                       onChange={handleChange}
                       placeholder="https://httpbin.org/get"
@@ -120,29 +127,12 @@ const MainContainer = () => {
               </TabList>
 
               <TabPanel>
-                <div className="query_param">
-                  <div className="query_param_inputs">
-                    <div className="TabContentLabelContainer">
-                      <label className="TabContentLabel">Query Params</label>
-                      <span onClick={() => handleAddFields()}>
-                        <FaIcons.FaPlus
-                          size="0.8em"
-                          color="#ff5722"
-                          className="AddIcon"
-                        />
-                      </span>
-                    </div>
-
-                    {inputFields.map((inputField, index) => (
-                      <KeyvalueInput
-                        inputField={inputField}
-                        index={index}
-                        handleInputChange={handleInputChange}
-                        handleRemoveFields={handleRemoveFields}
-                      />
-                    ))}
-                  </div>
-                </div>
+                <QueryParam
+                  handleAddFields={handleAddFields}
+                  inputFields={inputFields}
+                  handleInputChange={handleInputChange}
+                  handleRemoveFields={handleRemoveFields}
+                />
               </TabPanel>
               <TabPanel>
                 <h2>Any content 2</h2>

@@ -12,6 +12,9 @@ const RequestmanConstant = {
   },
   WITHOUT_PAYLOAD: "WITHOUT_PAYLOAD",
   WITH_PAYLOAD: "WITH_PAYLOAD",
+  KEY_VALUE_INPUT : [{ qp_key: "", qp_value: "" }],
+  REQUEST_FORM_API_URL:"apiUrl",
+  REQUEST_FORM_API_ACTION:"apiAction"
 };
 
 export default RequestmanConstant;
