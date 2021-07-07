@@ -36,8 +36,6 @@
   text-align: left;
   margin: 5px;
   height: 50%;
-  /* background-color: var(--bg-dark-color);
-    color: var(--fg-color); */
 }
 .MainWrapper .output {
   margin-top: 12px;
